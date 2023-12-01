@@ -15,7 +15,7 @@ import java.net.URISyntaxException;
 @Slf4j
 @Controller
 @RestController
-@CrossOrigin(originPatterns = "http://3.39.21.137:8080")
+@CrossOrigin(origins = "http://3.39.21.137:8080")
 public class UserController {//여기서 로그인 회원가입 다
 
     @PostMapping("/user/join")
