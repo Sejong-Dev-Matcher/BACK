@@ -7,6 +7,8 @@ import SDM.springmvc.basic.service.UserParsing;
 import SDM.springmvc.basic.repository.UserRepository;
 import com.google.gson.JsonObject;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -66,4 +68,9 @@ public class UserController {//여기서 로그인 회원가입 다
             return "exception"; //회원가입 하고와라
         }
     }
+    @RequestMapping(value = "/user/login", method = RequestMethod.OPTIONS)
+    public ResponseEntity handle() {
+        return new ResponseEntity(HttpStatus.OK);
+    }
+
 }

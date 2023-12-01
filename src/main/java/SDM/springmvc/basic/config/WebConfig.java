@@ -10,18 +10,12 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/api/**")
+        registry.addMapping("/user/login/**")
                 .allowedOriginPatterns("*")
-                .allowedMethods("*")
-                .allowedHeaders("*")
-                .allowCredentials(true)
-                .maxAge(3600);
-
-        registry.addMapping("/user/**")
-                .allowedOriginPatterns("*")
-                .allowedMethods("*")
+                .allowedMethods("GET","POST","PUT","DELETE","OPTIONS") // OPTIONS 메서드를 추가
                 .allowedHeaders("*")
                 .allowCredentials(true)
                 .maxAge(3600);
     }
 }
+
