@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @RestController
-@CrossOrigin(originPatterns = "http://3.39.21.137:8080")
+@CrossOrigin(origins = "http://3.39.21.137:8080")
 public class ProjectBoardController {
     @Autowired
     private ProjectBoardService projectBoardService;
